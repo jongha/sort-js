@@ -1,0 +1,22 @@
+{
+    "name": "sort",
+    "title": "Sort Library for Javascript",
+    "description": "Support input control for email address",
+    "version": "1.0.1",
+    "author": {
+        "name": "Jong-Ha Ahn",
+        "email": "jongha.ahn@mrlatte.net",
+        "url": "http://www.mrlatte.net"
+    },
+    "dependencies": {
+    
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://github.com/jongha/sort.js/blob/master/LICENSE"}
+    ],
+    "keywords": ["sort", "javascript", "library"],
+    "bugs": "https://github.com/jongha/sort.js/issues",
+    "homepage": "https://github.com/jongha/sort.js",
+    "docs": "https://github.com/jongha/sort.js"
+}

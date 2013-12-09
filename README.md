@@ -1,4 +1,4 @@
 sort.js
 =======
 
-Sort Algorithms for Javascript
+Sort Library for Javascript
