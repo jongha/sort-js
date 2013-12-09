@@ -1,14 +1,23 @@
 ﻿(function() {
-    var bubbleVarAsc = [10, 9, 8, 7, 6, 5, 4, 3 ,2, 1];
-    var bubbleVarDesc = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var MAX = 10000;
+    var data1 = []; // asc
+    var data2 = []; // desc
+    
+    for(var i=0; i<=MAX; ++i) {
+        data1.push(i);
+        data2.push(MAX - i);
+    }
 
-    test('Bubble sort asc', function() {
-        bubbleVarAsc.bubble(true);
-        deepEqual(bubbleVarAsc, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    var data1_clone = data1.slice(0);;
+    var data2_clone = data2.slice(0);;
+    
+    test('Bubble sort asc',function() {
+        data1.bubble({ order: 'asc' });
+        deepEqual(data1, data1);
     });
 
-    test('Bubble sort desc', function() {
-        bubbleVarDesc.bubble(false);
-        deepEqual(bubbleVarDesc, [10, 9, 8, 7, 6, 5, 4, 3 ,2, 1]);
+    test('Bubble sort desc',function() {
+        data2.bubble({ order: 'desc' });
+        deepEqual(data2, data2);
     });
 }(jQuery));
