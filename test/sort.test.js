@@ -1,23 +1,35 @@
 ﻿(function() {
-    var MAX = 10000;
-    var data1 = []; // asc
-    var data2 = []; // desc
+    var MAX = 1000;
+    var data_asc = []; // asc
+    var data_desc = []; // desc
+    var data_rand = [];
     
-    for(var i=0; i<=MAX; ++i) {
-        data1.push(i);
-        data2.push(MAX - i);
+    var i = 0;
+    for(i=0; i<=MAX; ++i) {
+        data_asc.push(i);
+        data_desc.push(MAX - i);
+        data_rand.push(parseInt(Math.random() * 10000 % 1000));
     }
-
-    var data1_clone = data1.slice(0);
-    var data2_clone = data2.slice(0);
     
-    test('Bubble sort asc',function() {
-        data1.bubble({ order: 'asc' });
-        deepEqual(data1, data1_clone);
-    });
+    test('Bubble Sort',function() {
+        var data = data_desc.slice(0);
+        data.bubble({ order: 'asc' });
+        deepEqual(data, data_asc);
+        
+        data = data_asc.slice(0);
+        data.bubble({ order: 'desc' });
+        deepEqual(data, data_desc);
 
-    test('Bubble sort desc',function() {
-        data2.bubble({ order: 'desc' });
-        deepEqual(data2, data2_clone);
+        data = data_rand.slice(0);
+        data.bubble({ order: 'asc' });
+        for(i=1; i<data.length; ++i) {
+            equal(data[i-1] <= data[i], true);
+        }
+        
+        data = data_rand.slice(0);
+        data.bubble({ order: 'desc' });
+        for(i=1; i<data.length; ++i) {
+            equal(data[i-1] >= data[i], true);
+        }        
     });
 }(jQuery));
