@@ -23,13 +23,13 @@
         data = data_rand.slice(0);
         data.bubble({ order: 'asc' });
         for(i=1; i<data.length; ++i) {
-            equal(data[i-1] <= data[i], true);
+            ok(data[i-1] <= data[i], 'Bubble sort asc fails');
         }
         
         data = data_rand.slice(0);
         data.bubble({ order: 'desc' });
         for(i=1; i<data.length; ++i) {
-            equal(data[i-1] >= data[i], true);
+            ok(data[i-1] >= data[i], 'Bubble sort desc fails');
         }        
     });
 }(jQuery));
