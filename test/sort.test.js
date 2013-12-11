@@ -4,7 +4,6 @@
     var data_desc = []; // desc
     var data_rand1 = [], data_rand2 = [];
 
-
     var i = 0, j = 0;
     for(i=0; i<=MAX; ++i) {
         data_asc.push(i);

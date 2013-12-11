@@ -22,8 +22,7 @@ Array.prototype.quick = function(options) {
 
     // reference: http://en.wikipedia.org/wiki/Quicksort
     var _quick = function(list, start, end) {
-        var pivot, _start = start, _end = end;
-        pivot = list[start];
+        var pivot = list[start], _start = start, _end = end;
         while (start < end) {
             while ((asc && (list[end] >= pivot) || !asc && (list[end] <= pivot)) && (start < end)) {
                 end--;

@@ -5,23 +5,55 @@
 
 Sort Library for Javascript
 
+## `Test case`
+
+* Case 1: Totally descending 2,000 data set to ascend.
+* Case 2: Totally ascending 2,000 data set to descend.
+* Case 3: Random 2,000 data set to ascend.
+* Case 4: Random 2,000 data set to descend.
+
 ## `Usage`
 
 ```
-var vals = [1,2,3,4,5];
+var data = [1,2,3,4,5];
 ```
 
 ### `Bubble Sort`
 
-```
-vals.bubble({ order: 'desc' }); // vals == [5,4,3,2,1]
-vals.bubble({ order: 'asc' }); // vals == [1,2,3,4,5]
-```
+Speed: 640 ms (Speed of test cases)
 
+```
+data.bubble({ order: 'desc' }); // data == [5,4,3,2,1]
+data.bubble({ order: 'asc' }); // data == [1,2,3,4,5]
+```
 
 ### `Quick Sort`
 
+Speed: 15 ms (Speed of test cases)
+
+Faster then Bubble sort.
+
 ```
-vals.quick({ order: 'desc' }); // vals == [5,4,3,2,1]
-vals.quick({ order: 'asc' }); // vals == [1,2,3,4,5]
+data.quick({ order: 'desc' }); // data == [5,4,3,2,1]
+data.quick({ order: 'asc' }); // data == [1,2,3,4,5]
 ```
+
+### `Merge Sort`
+
+Not Implemented
+
+### `Heap Sort`
+
+Not Implemented
+
+### `Insertion Sort`
+
+Not Implemented
+
+### `Selection Sort`
+
+Not Implemented
+
+### `Binary Sort`
+
+Not Implemented
