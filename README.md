@@ -8,7 +8,20 @@ Sort Library for Javascript
 ## `Usage`
 
 ```
-var arrayVal = [1,2,3,4,5];
-arrayVal.bubble({ order: "desc" }); // arrayVal == [5,4,3,2,1]
-arrayVal.bubble({ order: "asc" }); // arrayVal == [1,2,3,4,5]
+var vals = [1,2,3,4,5];
+```
+
+### `Bubble Sort`
+
+```
+vals.bubble({ order: 'desc' }); // vals == [5,4,3,2,1]
+vals.bubble({ order: 'asc' }); // vals == [1,2,3,4,5]
+```
+
+
+### `Quick Sort`
+
+```
+vals.quick({ order: 'desc' }); // vals == [5,4,3,2,1]
+vals.quick({ order: 'asc' }); // vals == [1,2,3,4,5]
 ```
