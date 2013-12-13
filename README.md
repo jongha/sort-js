@@ -44,7 +44,7 @@ data.quick({ order: 'desc' }); // data == [5,4,3,2,1]
 data.quick({ order: 'asc' }); // data == [1,2,3,4,5]
 ```
 
-### ``
+### `Merge Sort`
 
 Speed: 15 ms (Speed of test cases)
 
