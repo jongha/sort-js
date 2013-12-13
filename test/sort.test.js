@@ -60,4 +60,28 @@
             }
         }
     });
+
+    test('Merge Sort',function() {
+        var data = data_desc.slice(0);
+        data.merge({ order: 'asc' });
+        deepEqual(data, data_asc);
+
+        data = data_asc.slice(0);
+        data.merge({ order: 'desc' });
+        deepEqual(data, data_desc);
+
+        for(j=0; j<rands.length; ++j) {
+            data = rands[j].slice(0);
+            data.merge({ order: 'asc' });
+            for(i=1; i<data.length; ++i) {
+                ok(data[i-1] <= data[i], 'Merge sort asc fails,');
+            }
+
+            data = rands[j].slice(0);
+            data.merge({ order: 'desc' });
+            for(i=1; i<data.length; ++i) {
+                ok(data[i-1] >= data[i], 'Merge sort desc fails,');
+            }
+        }
+    });
 }(jQuery));

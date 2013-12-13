@@ -57,8 +57,46 @@ Array.prototype.quick = function(options) {
     _quick(this, 0, this.length - 1);
 };
 
-Array.prototype.merge = function() {
-    console.error('Not Implemented');
+Array.prototype.merge = function(options) {
+    var asc = options && options.order === 'asc'; // true: asc, false: desc
+
+    var _merge = function(part1, part2, list, start, end) {
+        var data = [];
+
+        var i = 0, j = 0;
+        while(i < part1.length || j < part2.length) {
+            if(j >= part2.length || (i < part1.length &&
+                ((asc && part1[i] < part2[j]) || (!asc && part1[i] >= part2[j]))
+                )) {
+                data.push(part1[i++]);
+
+            }else if(j < part2.length) {
+                data.push(part2[j++]);
+            }
+        }
+
+        for(i = start; i < end; ++i) {
+            list[i] = data[i];
+        }
+
+        return data;
+    };
+
+    var _partitioning = function(list) {
+        if(list.length > 1) {
+            var len = list.length;
+            var mid = Math.round(len / 2);
+
+            var part1 = _partitioning(list.slice(0, mid));
+            var part2 = _partitioning(list.slice(mid, len));
+
+            return _merge(part1, part2, list, 0, len);
+        }
+
+        return list;
+    };
+
+    _partitioning(this);
 };
 
 Array.prototype.heap = function() {
