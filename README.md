@@ -14,9 +14,18 @@ Sort Library for Javascript
 
 ## `Usage`
 
+This script is prototype of Javascript Array. First, includes the script block like below where you want. 
+
+```
+<script src="./dist/sort.min.js"></script>
+```
+
+And use it. It is simple.
+
 ```
 var data = [1,2,3,4,5];
 ```
+
 
 ### `Bubble Sort`
 
