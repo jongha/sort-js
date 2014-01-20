@@ -14,7 +14,7 @@ Sort Library for Javascript
 
 ## `Usage`
 
-This script is prototype of Javascript Array. First, includes the script block like below where you want. 
+This script is prototype of Javascript Array. First, includes the script block like below where you want.
 
 ```
 <script src="./dist/sort.min.js"></script>
@@ -81,7 +81,16 @@ data.heap({ order: 'asc' }); // data == [1,2,3,4,5]
 
 ### `Insertion Sort`
 
-Not Implemented
+Speed: 18 ms (Speed of test cases)
+
+Time complexity: O(n^2)
+
+Faster then Bubble sort. (But, the time complexity is same with bubble sort.)
+
+```
+data.insertion({ order: 'desc' }); // data == [5,4,3,2,1]
+data.insertion({ order: 'asc' }); // data == [1,2,3,4,5]
+```
 
 ### `Selection Sort`
 

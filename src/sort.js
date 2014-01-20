@@ -167,8 +167,17 @@ Array.prototype.heap = function(options) {
     if(!asc) { this.reverse(); }
 };
 
-Array.prototype.insertion = function() {
-    console.error('Not Implemented');
+Array.prototype.insertion = function(options) {
+    var asc = options && options.order === 'asc'; // true: asc, false: desc
+
+    for (var i = 0; i < this.length; i++) {
+        var k = this[i];
+        for (var j = i; j > 0 && ((asc && k < this[j - 1]) || (!asc && k > this[j - 1])); j--) {
+            this[j] = this[j - 1];
+        }
+
+        this[j] = k;
+    }
 };
 
 Array.prototype.selection = function() {
