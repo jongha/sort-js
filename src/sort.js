@@ -203,7 +203,3 @@ Array.prototype.selection = function(options) {
         }
     }
 };
-
-Array.prototype.binary = function() {
-    console.error('Not Implemented');
-};

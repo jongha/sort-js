@@ -103,6 +103,6 @@ data.selection({ order: 'desc' }); // data == [5,4,3,2,1]
 data.selection({ order: 'asc' }); // data == [1,2,3,4,5]
 ```
 
-### `Binary Sort`
+## License
 
-Not Implemented
+sort.js is available under the terms of the MIT License.
