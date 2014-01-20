@@ -81,7 +81,7 @@ data.heap({ order: 'asc' }); // data == [1,2,3,4,5]
 
 ### `Insertion Sort`
 
-Speed: 18 ms (Speed of test cases)
+Speed: 38 ms (Speed of test cases)
 
 Time complexity: O(n^2)
 
@@ -94,7 +94,14 @@ data.insertion({ order: 'asc' }); // data == [1,2,3,4,5]
 
 ### `Selection Sort`
 
-Not Implemented
+Speed: 48 ms (Speed of test cases)
+
+Time complexity: O(n^2)
+
+```
+data.selection({ order: 'desc' }); // data == [5,4,3,2,1]
+data.selection({ order: 'asc' }); // data == [1,2,3,4,5]
+```
 
 ### `Binary Sort`
 

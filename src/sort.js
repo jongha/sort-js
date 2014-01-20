@@ -109,7 +109,7 @@ Array.prototype.heap = function(options) {
         _put(list);
 
         var _ref, _results = [], end = list.length - 1;
-        while (end > 0) {
+        while(end > 0) {
 
             _ref = [list[end], list[0]];
             list[0] = _ref[0];
@@ -128,7 +128,7 @@ Array.prototype.heap = function(options) {
         i = Math.floor(i);
         _results = [];
 
-        while (i >= 0) {
+        while(i >= 0) {
             _shift(list, i, list.length);
             _results.push(--i);
         }
@@ -137,21 +137,21 @@ Array.prototype.heap = function(options) {
 
     var _shift = function(heap, i, max) {
         var c1, c2, _big, _ref;
-        while (i < max) {
+        while(i < max) {
 
             _big = i;
             c1 = 2 * i + 1;
             c2 = c1 + 1;
 
-            if (c1 < max && heap[c1] > heap[_big]) {
+            if(c1 < max && heap[c1] > heap[_big]) {
                 _big = c1;
             }
 
-            if (c2 < max && heap[c2] > heap[_big]) {
+            if(c2 < max && heap[c2] > heap[_big]) {
                 _big = c2;
             }
 
-            if (_big === i) {
+            if(_big === i) {
                 return;
             }
 
@@ -170,7 +170,8 @@ Array.prototype.heap = function(options) {
 Array.prototype.insertion = function(options) {
     var asc = options && options.order === 'asc'; // true: asc, false: desc
 
-    for (var i = 0; i < this.length; i++) {
+    var i;
+    for(i = 0; i < this.length; i++) {
         var k = this[i];
         for (var j = i; j > 0 && ((asc && k < this[j - 1]) || (!asc && k > this[j - 1])); j--) {
             this[j] = this[j - 1];
@@ -180,8 +181,27 @@ Array.prototype.insertion = function(options) {
     }
 };
 
-Array.prototype.selection = function() {
-    console.error('Not Implemented');
+Array.prototype.selection = function(options) {
+
+    var asc = options && options.order === 'asc'; // true: asc, false: desc
+
+    var i, j;
+    for(i = 0; i < this.length-1; ++i) {
+
+        var _find = this[i];
+        var _findat = i;
+
+        for(j = i; j < this.length; ++j) {
+            if((asc && this[j] < _find) || (!asc && this[j] > _find)){
+                _findat = j;
+                _find = this[j];
+            }
+        }
+
+        if(_findat !== i) {
+            this[i] = [this[_findat], this[_findat] = this[i]][0];
+        }
+    }
 };
 
 Array.prototype.binary = function() {
