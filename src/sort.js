@@ -99,8 +99,72 @@ Array.prototype.merge = function(options) {
     _partitioning(this);
 };
 
-Array.prototype.heap = function() {
-    console.error('Not Implemented');
+Array.prototype.heap = function(options) {
+
+    // reference: http://rosettacode.org/wiki/Sorting_algorithms/Heapsort
+    // Not optimize yet.
+    var asc = options && options.order === 'asc'; // true: asc, false: desc
+
+    var _heap = function(list) {
+        _put(list);
+
+        var _ref, _results = [], end = list.length - 1;
+        while (end > 0) {
+
+            _ref = [list[end], list[0]];
+            list[0] = _ref[0];
+            list[end] = _ref[1];
+
+            _shift(list, 0, end);
+            _results.push(--end);
+        }
+
+        return _results;
+    };
+
+    var _put = function(list) {
+        var i, _results;
+        i = list.length / 2 - 1;
+        i = Math.floor(i);
+        _results = [];
+
+        while (i >= 0) {
+            _shift(list, i, list.length);
+            _results.push(--i);
+        }
+        return _results;
+    };
+
+    var _shift = function(heap, i, max) {
+        var c1, c2, _big, _ref;
+        while (i < max) {
+
+            _big = i;
+            c1 = 2 * i + 1;
+            c2 = c1 + 1;
+
+            if (c1 < max && heap[c1] > heap[_big]) {
+                _big = c1;
+            }
+
+            if (c2 < max && heap[c2] > heap[_big]) {
+                _big = c2;
+            }
+
+            if (_big === i) {
+                return;
+            }
+
+            _ref = [heap[_big], heap[i]];
+            heap[i] = _ref[0];
+            heap[_big] = _ref[1];
+
+            i = _big;
+        }
+    };
+
+    _heap(this);
+    if(!asc) { this.reverse(); }
 };
 
 Array.prototype.insertion = function() {
