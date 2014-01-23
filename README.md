@@ -3,7 +3,12 @@
 [![Coverage Status](https://coveralls.io/repos/jongha/sort.js/badge.png)](https://coveralls.io/r/jongha/sort.js)
 [![Dependency Status](https://gemnasium.com/jongha/sort.js.png)](https://gemnasium.com/jongha/sort.js)
 
-Sort Library for Javascript
+This is sorting library for Javascript. The sorting algorithm is an algorithm that puts elements of a list in a numerical order. This library contains many sorting algorithms Bubble sort, Quicksort, Merge sort, Heapsort, Insertion sort and selection sort. 
+
+Bubble sort is a simple sorting algorithm that works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order. Quicksort makes O(n log n) comparisons to sort n items. In the worst case, it makes O(n^2) comparisons, though this behavior is rare. Merge sort is a divide and conquer algorithm. Heapsort is a comparison-based sorting algorithm. Insertion sort is a simple sorting algorithm that builds the final sorted array or list one item at a time. Selection sort is specifically an in-place comparison sort.
+
+These functions help what your application finds an optimal algorithm at specific data. 
+
 
 ## `Test case`
 
@@ -40,7 +45,7 @@ data.bubble({ order: 'desc' }); // data == [5,4,3,2,1]
 data.bubble({ order: 'asc' }); // data == [1,2,3,4,5]
 ```
 
-### `Quick Sort`
+### `Quicksort`
 
 Speed: 21 ms (Speed of test cases)
 
@@ -59,20 +64,20 @@ Speed: 15 ms (Speed of test cases)
 
 Time complexity: O(nlogn)
 
-Faster then Quick sort. Almost same speed with Quick Sort.
+Faster then Quicksort. Almost same speed with Quicksort.
 
 ```
 data.merge({ order: 'desc' }); // data == [5,4,3,2,1]
 data.merge({ order: 'asc' }); // data == [1,2,3,4,5]
 ```
 
-### `Heap Sort`
+### `Heapsort`
 
 Speed: 18 ms (Speed of test cases)
 
 Time complexity: O(nlogn)
 
-Faster then Quick sort. (The code is not optimize yet.)
+Faster then Quicksort. (The code is not optimize yet.)
 
 ```
 data.heap({ order: 'desc' }); // data == [5,4,3,2,1]
