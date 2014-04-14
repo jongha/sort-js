@@ -1,7 +1,7 @@
-# sort.js
-[![Build Status](https://travis-ci.org/jongha/sort.js.png?branch=master)](https://travis-ci.org/jongha/sort.js)
-[![Coverage Status](https://coveralls.io/repos/jongha/sort.js/badge.png)](https://coveralls.io/r/jongha/sort.js)
-[![Dependency Status](https://gemnasium.com/jongha/sort.js.png)](https://gemnasium.com/jongha/sort.js)
+# sort-js
+[![Build Status](https://travis-ci.org/jongha/sort-js.png?branch=master)](https://travis-ci.org/jongha/sort-js)
+[![Coverage Status](https://coveralls.io/repos/jongha/sort-js/badge.png)](https://coveralls.io/r/jongha/sort-js)
+[![Dependency Status](https://gemnasium.com/jongha/sort-js.png)](https://gemnasium.com/jongha/sort-js)
 
 This is sorting library for Javascript. The sorting algorithm is an algorithm that puts elements of a list in a numerical order. This library contains many sorting algorithms Bubble sort, Quicksort, Merge sort, Heapsort, Insertion sort and selection sort. 
 
@@ -110,4 +110,4 @@ data.selection({ order: 'asc' }); // data == [1,2,3,4,5]
 
 ## License
 
-sort.js is available under the terms of the MIT License.
+sort-js is available under the terms of the MIT License.
