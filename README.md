@@ -10,14 +10,14 @@ Bubble sort is a simple sorting algorithm that works by repeatedly stepping thro
 These functions help what your application finds an optimal algorithm at specific data. 
 
 
-## `Test case`
+## Test case
 
 * Case 1: Totally descending 2,000 data set to ascend.
 * Case 2: Totally ascending 2,000 data set to descend.
 * Case 3: Random 2,000 data set to ascend.
 * Case 4: Random 2,000 data set to descend.
 
-## `Usage`
+## Usage
 
 This script is prototype of Javascript Array. First, includes the script block like below where you want.
 
@@ -31,8 +31,7 @@ And use it. It is simple.
 var data = [1,2,3,4,5];
 ```
 
-
-### `Bubble Sort`
+### Bubble Sort
 
 The code is very simple But, slow.
 
@@ -45,7 +44,7 @@ data.bubble({ order: 'desc' }); // data == [5,4,3,2,1]
 data.bubble({ order: 'asc' }); // data == [1,2,3,4,5]
 ```
 
-### `Quicksort`
+### Quicksort
 
 Speed: 21 ms (Speed of test cases)
 
@@ -58,7 +57,7 @@ data.quick({ order: 'desc' }); // data == [5,4,3,2,1]
 data.quick({ order: 'asc' }); // data == [1,2,3,4,5]
 ```
 
-### `Merge Sort`
+### Merge Sort
 
 Speed: 15 ms (Speed of test cases)
 
@@ -71,7 +70,7 @@ data.merge({ order: 'desc' }); // data == [5,4,3,2,1]
 data.merge({ order: 'asc' }); // data == [1,2,3,4,5]
 ```
 
-### `Heapsort`
+### Heapsort
 
 Speed: 18 ms (Speed of test cases)
 
@@ -84,7 +83,7 @@ data.heap({ order: 'desc' }); // data == [5,4,3,2,1]
 data.heap({ order: 'asc' }); // data == [1,2,3,4,5]
 ```
 
-### `Insertion Sort`
+### Insertion Sort
 
 Speed: 38 ms (Speed of test cases)
 
@@ -97,7 +96,7 @@ data.insertion({ order: 'desc' }); // data == [5,4,3,2,1]
 data.insertion({ order: 'asc' }); // data == [1,2,3,4,5]
 ```
 
-### `Selection Sort`
+### Selection Sort
 
 Speed: 48 ms (Speed of test cases)
 
